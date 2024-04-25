@@ -1,0 +1,112 @@
+
+
+.banner {
+  margin-top: 0;
+  padding: 100px 0 100px 0;
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
+
+  gap: 5px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: 
+  "content image" ; 
+  gap: 5px;
+}
+
+ .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 25px;
+  position: relative;
+  top: 50px;
+
+}
+ .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+  position: relative;
+  top: 50px; 
+  right: 100px;
+}
+
+
+.banner .tagline {
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 8px 10px;
+  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  font-size: 40px;
+  margin-bottom: 100px;
+  display: inline-block;
+}
+.banner h1 {
+  font-size: 45px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1;
+  margin-bottom: 20px;
+  display: block;
+  width: 80%;
+}
+.banner p {
+  color: #b611e4;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  width: 70%;
+  margin-bottom: 20px;
+}
+.banner button {
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 60px;
+  letter-spacing: 0.8px;
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+}
+.banner button svg {
+  font-size: 25px;
+  margin-right: 10px;
+  transition: 0.3s ease-in-out;
+  line-height: 1;
+}
+.banner button:hover svg {
+  margin-right: 25px;
+}
+.banner img {
+  animation: updown 3s linear infinite;
+}
+@keyframes updown {
+    0% {
+        transform: translateY(-20px);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+.txt-rotate > .wrap {
+  border-right: 0.08em solid #666;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    grid-template-columns: 1fr;
+  }
+}
